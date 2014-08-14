@@ -107,7 +107,19 @@ a
 	overflow: hidden
 .l-main
 	+tr(transform .2s linear)
-	
+.l-cols
+	+clr
+	background: #e7e1dc 
+.l-col-left
+	float: left
+	width: 76%
+	background: #f8f5f3 
+	img
+		margin: 0 auto 
+		max-width: 100%
+		height: auto
+.l-col-right
+	overflow: hidden
 .title
 	margin: 111px 0 25px 
 	font-size: 36px
@@ -115,6 +127,15 @@ a
 	color: $brown
 	text-align: center
 	letter-spacing: 5px
+	+r(768)
+		font-size: 25px
+		margin: 93px 0 25px  
+.subtitle
+	margin: 25px 0 25px 
+	font-size: 36px
+	+gbold
+	color: $brown
+	text-align: center
 	+r(768)
 		font-size: 25px
 		margin: 93px 0 25px   
@@ -151,6 +172,8 @@ a
 		&:hover
 			text-decoration: none
 			color: $blue 
+		&.is-active
+			opacity: 0.3
 	&__logo
 		margin-left: 32px
 		+svg(logo,26,43)

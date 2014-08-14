@@ -10,11 +10,26 @@ head.ready(function() {
 	$('body').swipe({
 		swipeLeft: function(event, direction, distance, duration, fingerCount) {
 		  $("html").removeClass("has-open-nav")
-		},
-		swipeRight: function(event, direction, distance, duration, fingerCount) {
-		    $("html").addClass("has-open-nav")
 		}
+		// swipeRight: function(event, direction, distance, duration, fingerCount) {
+		//     $("html").addClass("has-open-nav")
+		// }
 		//Default is 75px, set to 0 for demo so any distance triggers swipe
 		//threshold: 0
 	});
+	$(".js-scroll-to").on("click",function(){
+		var section = $(this).attr("data-section");
+		var sectionTop = $("."+section).offset().top;
+		$('html, body').animate({
+            scrollTop: sectionTop
+        }, 200); 
+		return false;
+	});
+	$('.js-slick').slick({
+  infinite: true,
+  slidesToShow: 1,
+  slidesToScroll: 1
+});
+
+				
 });

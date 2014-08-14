@@ -1,0 +1,59 @@
+.page-head
+	margin: 0 0 25px 
+.article
+	overflow: hidden
+	padding: 0 14% 
+	+creg
+	font-size: 18px
+	color: $brown_l
+	p
+		margin-bottom: 18px
+	img
+		float: left
+		margin: 12px 30px 12px 0
+		max-width: 100%
+		height: auto
+	a
+		color: $blue_d
+		text-decoration: underline
+		&:hover
+			text-decoration: none
+	ol
+		margin-bottom: 18px
+		counter-reset: list1
+		li
+			position: relative
+			padding-left: 15px
+			&:before
+				content: ""
+				position: absolute
+				left: 0
+				top: 0
+				//color: $orange  
+				counter-increment: list1 
+				content: counter(list1) ". "
+	ul
+		margin-bottom: 18px
+		li
+			position: relative
+			padding-left: 10px
+			+cit
+			&:before 
+				content: "•"
+				position: absolute
+				left: 0
+				top: 0
+	table
+		th
+			padding: 4px 0
+			text-align: left
+			font-weight: normal
+			+gmed
+			color: $brown 
+		td
+			padding: 4px 0 
+.slider
+	img
+		margin: 0
+		float: none
+		
