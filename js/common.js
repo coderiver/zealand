@@ -13,8 +13,8 @@ head.ready(function() {
 		},
 		swipeRight: function(event, direction, distance, duration, fingerCount) {
 		    $("body").addClass("has-open-nav")
-		},
+		}
 		//Default is 75px, set to 0 for demo so any distance triggers swipe
-		threshold: 0
+		//threshold: 0
 	});
 });

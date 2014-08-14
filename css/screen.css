@@ -33,7 +33,7 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 @font-face { font-family: celestepro-bookita; src: url("../fonts/celestepro-bookita.eot"); src: url("../fonts/celestepro-bookita.eot?#iefix") format("embedded-opentype"), url("../fonts/celestepro-bookita.woff") format("woff"), url("../fonts/celestepro-bookita.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: celestepro-ita; src: url("../fonts/celestepro-ita.eot"); src: url("../fonts/celestepro-ita.eot?#iefix") format("embedded-opentype"), url("../fonts/celestepro-ita.woff") format("woff"), url("../fonts/celestepro-ita.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 body { font-family: "celestepro", Arial, sans-serif; min-width: 320px; font-size: 18px; line-height: 1.3; background: #f8f5f3; -moz-transition: -moz-transform 0.2s linear; -o-transition: -o-transform 0.2s linear; -webkit-transition: -webkit-transform 0.2s linear; transition: transform 0.2s linear; }
-body.has-open-nav .l-main, body.has-open-nav .header { -moz-transform: translateX(266px); -ms-transform: translateX(266px); -webkit-transform: translateX(266px); transform: translateX(266px); }
+body.has-open-nav .l-main, body.has-open-nav .header, body.has-open-nav .nav { -moz-transform: translateX(266px); -ms-transform: translateX(266px); -webkit-transform: translateX(266px); transform: translateX(266px); }
 
 a { text-decoration: none; }
 
@@ -67,7 +67,7 @@ a { text-decoration: none; }
 .header__nav-key { background: url("../img/svg/nav.svg") no-repeat 0 0; width: 25px; height: 23px; display: inline-block; display: none; }
 @media only screen and (max-width: 780px) { .header__nav-key { display: inline-block; vertical-align: middle; } }
 
-.nav { position: fixed; left: -266px; top: 0; bottom: 0; width: 266px; background: #234a5c; font-family: "geometria-medium", Arial, sans-serif; text-transform: uppercase; text-align: center; text-align: center; font-size: 0; }
+.nav { position: fixed; left: -266px; top: 0; bottom: 0; width: 266px; background: #234a5c; font-family: "geometria-medium", Arial, sans-serif; text-transform: uppercase; text-align: center; text-align: center; font-size: 0; -moz-transition: -moz-transform 0.2s linear; -o-transition: -o-transform 0.2s linear; -webkit-transition: -webkit-transform 0.2s linear; transition: transform 0.2s linear; }
 .nav:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
 .nav ul { display: inline-block; vertical-align: middle; font-size: 15px; }
 .nav li { margin-bottom: 17px; }
