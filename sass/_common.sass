@@ -80,6 +80,17 @@ $blue: #73bedf
 $blue_d: #234a5c
 $green: #56be5b
 $orange: #ff8433
+html
+	&.has-open-nav
+		overflow: hidden
+		body
+			overflow: hidden
+		.l-main,
+		.header,
+		.nav
+			+translateX(266px) 
+		.l-main
+			box-shadow: 0 0 10px #000 
 body
 	+creg
 	min-width: 320px
@@ -87,11 +98,6 @@ body
 	line-height: 1.3
 	background: #f8f5f3
 	+tr(transform .2s linear)
-	&.has-open-nav
-		.l-main,
-		.header,
-		.nav
-			+translateX(266px) 
 a
 	text-decoration: none
 .l-center
@@ -101,6 +107,7 @@ a
 	overflow: hidden
 .l-main
 	+tr(transform .2s linear)
+	
 .title
 	margin: 111px 0 25px 
 	font-size: 36px

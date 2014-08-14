@@ -4,15 +4,15 @@ head.ready(function() {
 	// 	$(".js-popup").hide();
 	// });
 	$(".js-show-nav").on("click",function(){
-		$("body").toggleClass("has-open-nav");
+		$("html").toggleClass("has-open-nav");
 		return false;
 	});
-	$('.l-out').swipe({
+	$('body').swipe({
 		swipeLeft: function(event, direction, distance, duration, fingerCount) {
-		  $("body").removeClass("has-open-nav")
+		  $("html").removeClass("has-open-nav")
 		},
 		swipeRight: function(event, direction, distance, duration, fingerCount) {
-		    $("body").addClass("has-open-nav")
+		    $("html").addClass("has-open-nav")
 		}
 		//Default is 75px, set to 0 for demo so any distance triggers swipe
 		//threshold: 0

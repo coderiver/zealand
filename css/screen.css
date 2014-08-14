@@ -32,8 +32,12 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 @font-face { font-family: celestepro-medium; src: url("../fonts/celestepro-medium.eot"); src: url("../fonts/celestepro-medium.eot?#iefix") format("embedded-opentype"), url("../fonts/celestepro-medium.woff") format("woff"), url("../fonts/celestepro-medium.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: celestepro-bookita; src: url("../fonts/celestepro-bookita.eot"); src: url("../fonts/celestepro-bookita.eot?#iefix") format("embedded-opentype"), url("../fonts/celestepro-bookita.woff") format("woff"), url("../fonts/celestepro-bookita.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: celestepro-ita; src: url("../fonts/celestepro-ita.eot"); src: url("../fonts/celestepro-ita.eot?#iefix") format("embedded-opentype"), url("../fonts/celestepro-ita.woff") format("woff"), url("../fonts/celestepro-ita.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+html.has-open-nav { overflow: hidden; }
+html.has-open-nav body { overflow: hidden; }
+html.has-open-nav .l-main, html.has-open-nav .header, html.has-open-nav .nav { -moz-transform: translateX(266px); -ms-transform: translateX(266px); -webkit-transform: translateX(266px); transform: translateX(266px); }
+html.has-open-nav .l-main { box-shadow: 0 0 10px black; }
+
 body { font-family: "celestepro", Arial, sans-serif; min-width: 320px; font-size: 18px; line-height: 1.3; background: #f8f5f3; -moz-transition: -moz-transform 0.2s linear; -o-transition: -o-transform 0.2s linear; -webkit-transition: -webkit-transform 0.2s linear; transition: transform 0.2s linear; }
-body.has-open-nav .l-main, body.has-open-nav .header, body.has-open-nav .nav { -moz-transform: translateX(266px); -ms-transform: translateX(266px); -webkit-transform: translateX(266px); transform: translateX(266px); }
 
 a { text-decoration: none; }
 
