@@ -40,31 +40,40 @@
 +font(geometria, geometria)  
 =greg
 	font-family: "geometria", Arial, sans-serif 
+	
 +font(geometria-bold, geometria-bold)  
 =gbold
 	font-family: "geometria-bold", Arial, sans-serif 
+	
 +font(geometria-medium, geometria-medium)  
 =gmed
 	font-family: "geometria-medium", Arial, sans-serif 
+	
 +font(geometria-extablack, geometria-extablack)  
 =gextra
 	font-family: "geometria-extablack", Arial, sans-serif 
+	
 	 
 +font(celestepro, celestepro)  
 =creg
 	font-family: "celestepro", Arial, sans-serif 
+	
 +font(celestepro-bold, celestepro-bold)  
 =cbold
-	font-family: "celestepro-bold", Arial, sans-serif 
+	font-family: "celestepro-bold", Arial, sans-serif
+	 
 +font(celestepro-medium, celestepro-medium)  
 =cmed
 	font-family: "celestepro-medium", Arial, sans-serif 
+	
 +font(celestepro-bookita, celestepro-bookita)  
 =cbook
 	font-family: "celestepro-bookita", Arial, sans-serif 
+	
 +font(celestepro-ita, celestepro-ita)  
 =cit
 	font-family: "celestepro-ita", Arial, sans-serif 
+	
 $brown: #6e5b50 
 $brown_l: #aa9283
 $blue: #73bedf
@@ -76,12 +85,21 @@ body
 	min-width: 320px
 	font-size: 18px 
 	line-height: 1.3
-	background: #f8f5f3 
+	background: #f8f5f3
+	+tr(transform .2s linear)
+	&.has-open-nav
+		.l-main,
+		.header
+			+translateX(266px) 
 a
 	text-decoration: none
 .l-center
 	margin: 0 auto
 	max-width: 1100px 
+.l-out
+	overflow: hidden
+.l-main
+	+tr(transform .2s linear)
 .title
 	margin: 111px 0 25px 
 	font-size: 36px
@@ -95,7 +113,6 @@ a
 .to-center
 	text-align: center
 // common blocks      
-	
 .header
 	position: fixed
 	top: 0
@@ -104,6 +121,7 @@ a
 	z-index: 10
 	padding: 8px 25px 
 	background: rgba(#000,.7) 
+	+tr(transform .2s linear)
 	+r(960)
 		padding: 8px 20px 
 	.l-center
@@ -145,20 +163,35 @@ a
 				display: block
 		span
 			+r(768)
-				display: none
-	&__nav
+				display: none			
+	&__nav-key
+		+svg(nav,25,23)
 		display: none
 		+r(780)
 			display: inline-block
 			vertical-align: middle
-		button
-			+svg(nav,25,23)
-			
-		ul
-			position: absolute
-			top: 100%
-			left: 0
-		 
+.nav
+	position: fixed
+	left: -266px
+	top: 0
+	bottom: 0
+	width: 266px
+	background: $blue_d 
+	+gmed
+	text-transform: uppercase
+	text-align: center
+	+vertical
+	ul
+		display: inline-block
+		vertical-align: middle
+		font-size: 15px
+	li
+		margin-bottom: 17px
+	a
+		color: #fff 
+	span
+		display: block
+		color: $orange 
 .logo
 	position: absolute
 	top: 94px 
