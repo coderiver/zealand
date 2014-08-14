@@ -1,8 +1,11 @@
 .top-section
 	position: relative
 	height: 100vh
+	min-height: 600px
 	overflow: hidden
 	text-align: center
+	background: url("../img/main-bg.jpg") 0 0 no-repeat
+	+cover
 	&:before
 		content: ""
 		position: absolute
@@ -26,6 +29,7 @@
 		bottom: 146px
 		left: 0
 		right: 0
+		line-height: 1.2
 		font-size: 36px
 		color: #fff
 		+gmed  
@@ -52,6 +56,8 @@
 	+justify
 	+ .to-center
 		margin-bottom: 64px
+		+r(768)
+			margin: 9px 0 32px 
 .benefit
 	display: inline-block
 	margin-bottom: 40px
@@ -60,13 +66,34 @@
 	text-align: center
 	font-size: 18px
 	line-height: 1.2
+	+r(768)
+		display: block
+		margin-bottom: 17px
+		width: 100%
 	&__title
 		margin-bottom: 13px
 		+gmed
 		font-size: 20px
 		color: $blue_d
+		+r(768)
+			position: relative
+			margin: 0
+			padding-left: 12px
+			text-align: left
+			font-size: 16px
+			&:before
+				content: ""
+				position: absolute
+				left: 0
+				top: 7px
+				width: 5px
+				height: 5px
+				border-radius: 50% 
+				background: $blue_d  
 	&__text
 		color: $brown_l 
+		+r(768)
+			display: none
 .projects-wrap
 	+clr
 	position: relative
@@ -78,12 +105,30 @@
 		margin: 0
 		z-index: 2
 		color: #000 
+		+r(900)
+			span
+				display: none
 .project
 	position: relative
 	float: left
 	width: 33.3%
 	height: 660px
 	color: #fff 
+	overflow: hidden
+	+r(900)
+		float: none
+		margin: 0 auto 
+		width: 480px
+	+r(768)
+		max-width: 366px
+		width: auto
+		height: auto
+	&__img
+		overflow: hidden
+		+r(900)
+			img
+				width: 100%
+				display: block
 	&__info
 		position: absolute
 		bottom: 0
@@ -93,6 +138,8 @@
 		font-size: 16px
 		background: rgba(#000, .7) 
 		text-align: center
+		+r(768)
+			padding: 30px 20px
 	&__title
 		margin: 0 0 19px 
 		+gbold
@@ -108,28 +155,79 @@
 	text-align: left
 	span
 		display: inline-block
+		vertical-align: middle
 		width: 50%
+		padding-right: 10px
 		font-size: 16px
 		+creg
 .plan
 	margin-bottom: 45px
 	padding: 0 5%
 	text-align: center
+	+r(900)
+		padding: 0 20px 
 	&__badges
 		margin-bottom: 23px
 		font-size: 16px
 		line-height: 1
 		li
 			display: inline-block
+			position: relative
 			width: 26%
 			text-align: left
 			color: $brown_l
 			+greg
+			&.is-blue
+				+r(900)
+					background: $blue
+				i
+					background: $blue 
+			&.is-green
+				+r(900)
+					background: $green
+				i
+					background: $green 
+			&.is-orange
+				+r(900)
+					background: $orange
+				i
+					background: $orange 
+			+r(1100)
+				width: 33%
+			+r(900)
+				width: 100%
+				margin-bottom: 1px
+				padding: 8px 25px 8px 13px
+				color: #000 
+				i
+					display: none
+				&:after
+					content: ""
+					position: absolute
+					top: 50%
+					margin-top: -14px
+					right: 5px
+					+svg(arr2,20,28) 
 		span
 			+gbold
+		i
+			display: inline-block 
+			margin: 0 8px 0 0
+			vertical-align: middle
+			width: 25px
+			height: 25px
 		div
 			display: inline-block
 			vertical-align: middle
+		a
+			display: none
+			+r(900)
+				position: absolute
+				display: block
+				left: 0
+				right: 0
+				bottom: 0
+				top: 0
 	&__img
 		overflow: hidden
 		position: relative
@@ -161,15 +259,3 @@
 		text-align: left
 	.link-action
 		margin-top: 24px
-.color
-	display: inline-block
-	margin: 0 8px 0 0
-	vertical-align: middle
-	width: 25px
-	height: 25px
-	&_blue
-		background: $blue 
-	&_green
-		background: $green 
-	&_orange
-		background: $orange 
