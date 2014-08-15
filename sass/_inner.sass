@@ -6,18 +6,45 @@
 	+creg
 	font-size: 18px
 	color: $brown_l
+	+r(960)
+		padding: 0 20px 
+	+r(768)
+		padding: 0 10px 
+	h1,h2,h3,h4,h5,h6
+		font-weight: normal
+		color: $brown 
+		+gbold
+	h2
+		margin: 44px 0 15px 
+		text-align: center
+		font-size: 32px
+	h3
+		margin: 44px 0 15px 
+		font-size: 24px
 	p
 		margin-bottom: 18px
+	strong,b
+		font-weight: normal
+		+cbold
+		color: $brown
+	em,i
+		font-weight: normal
+		+cit
 	img
 		float: left
 		margin: 12px 30px 12px 0
 		max-width: 100%
 		height: auto
+		+r(480)
+			float: none
+			margin: 12px 0 
 	a
 		color: $blue_d
 		text-decoration: underline
 		&:hover
 			text-decoration: none
+		img
+			float: none
 	ol
 		margin-bottom: 18px
 		counter-reset: list1
@@ -44,6 +71,7 @@
 				left: 0
 				top: 0
 	table
+		margin-bottom: 34px
 		th
 			padding: 4px 0
 			text-align: left
@@ -52,8 +80,47 @@
 			color: $brown 
 		td
 			padding: 4px 0 
-.slider
+	.slick-slider
+		margin: 34px 0 43px 
+		text-align: center
+		img
+			margin: 0
+			display: inline-block
+			width: auto
+			float: none
+.video
+	position: relative
+	overflow: hidden
 	img
-		margin: 0
+		display: block
+		max-width: 100%
+		margin: 0 auto
 		float: none
-		
+	&__play
+		position: absolute
+		top: 50%
+		left: 50%
+		margin: -42px 0 0 -42px 
+		+svg(play,84,84)
+		+tr
+		&:hover
+			opacity: .9
+
+.article-item
+	border-bottom: 2px solid #c9bab0  
+	padding: 20px 
+	&.is-active
+		background: #f8f5f3 
+		a
+			color: $brown_l 
+	a
+		color: $blue_d 
+		&:hover
+			text-decoration: underline
+	&__title
+		display: block
+		+gbold
+		font-size: 20px
+	&__text	
+		padding: 2px 0 
+		font-size: 16px

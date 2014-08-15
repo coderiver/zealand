@@ -90,7 +90,7 @@ html
 		.nav
 			+translateX(266px) 
 		.l-main
-			box-shadow: 0 0 10px #000 
+			box-shadow: 0 0 10px rgba(#000, .5) 
 body
 	+creg
 	min-width: 320px
@@ -108,18 +108,24 @@ a
 .l-main
 	+tr(transform .2s linear)
 .l-cols
+	margin: 0 0 40px 
 	+clr
 	background: #e7e1dc 
 .l-col-left
 	float: left
 	width: 76%
 	background: #f8f5f3 
+	+r(768)
+		width: 100%
 	img
 		margin: 0 auto 
 		max-width: 100%
 		height: auto
 .l-col-right
+	padding-top: 65px
 	overflow: hidden
+	+r(768)
+		display: none
 .title
 	margin: 111px 0 25px 
 	font-size: 36px
@@ -131,14 +137,14 @@ a
 		font-size: 25px
 		margin: 93px 0 25px  
 .subtitle
-	margin: 25px 0 25px 
+	margin: 93px 0 25px 
 	font-size: 36px
 	+gbold
 	color: $brown
 	text-align: center
 	+r(768)
 		font-size: 25px
-		margin: 93px 0 25px   
+		margin: 25px 0  
 .to-center
 	text-align: center
 // common blocks      
@@ -187,7 +193,7 @@ a
 		+gbold
 		+r(960)
 			font-size: 12px
-		button
+		a
 			+svg(tel,25,29)
 			display: none
 			+r(768)
