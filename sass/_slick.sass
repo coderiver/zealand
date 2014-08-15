@@ -89,6 +89,8 @@ $slick-dot-character: "\2022" !default
 	+hide-text
 	top: 50%
 	margin-top: -14px
+	+r(960)
+		display: none
 	&:focus
 		outline: none
 	&.slick-disabled
@@ -98,13 +100,9 @@ $slick-dot-character: "\2022" !default
 .slick-prev
 	left: -87px
 	+svg(prev,38,28)
-	+r(960)
-		left: 10px	
 .slick-next
 	right: -87px
-	+svg(next,38,28)
-	+r(960)
-		right: 10px		
+	+svg(next,38,28)	
 
 .slick-dots
 	text-align: center
