@@ -76,6 +76,16 @@
             border: 2px solid rgba(#174053,0)
 .tab_mobile
     display: none
+    li
+        margin-right: 0
+        
+        &:first-child
+            .link
+                border-left-width: 2px
+                
+    .link
+        border-left-width: 0
+        border-radius: 0
     +r(768)
         display: block
         width: 100%
