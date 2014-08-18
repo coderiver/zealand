@@ -6,6 +6,15 @@
 	text-align: center
 	background: url("../img/main-bg.jpg") 0 0 no-repeat
 	+cover
+	&_slider
+		&:before
+			display: none
+		
+	.slick-slider
+		margin: 0 auto 
+		width: 720px
+		+r(760)
+			width: 100%
 	&:before
 		content: ""
 		position: absolute
@@ -39,6 +48,7 @@
 		span
 			display: inline-block
 			max-width: 560px
+
 .scroll-down
 	position: absolute
 	bottom: 42px
@@ -102,6 +112,8 @@
 .projects-wrap
 	+clr
 	position: relative
+	&_mod
+		margin-bottom: 33px
 	.title
 		position: absolute
 		top: 110px
