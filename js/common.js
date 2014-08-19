@@ -3,18 +3,27 @@ head.ready(function() {
 	// $(document).on("click", function(){
 	// 	$(".js-popup").hide();
 	// });
-// WORKAROUND: converting 90vh to px
-	var IS_MOBILE_SAFARI_7 = !!navigator.userAgent.match(/i(Pad|Phone|Pod).+(Version\/7\.\d+ Mobile)/i);
+
 	$element = $('.js-top-section');
 	function fixMobileSafariViewport() {
 	  $element.css('height', window.innerHeight);
 	}
 	// listen to portrait/landscape changes
 	window.addEventListener('orientationchange', fixMobileSafariViewport, true);
-	fixMobileSafariViewport();
-	if (IS_MOBILE_SAFARI_7.length > 0) {
+	
+	
+
+
+	var isMacLike = navigator.userAgent.match(/(iPhone|iPod|iPad)/i)?true:false;
+
+	if(isMacLike){
 		fixMobileSafariViewport();
 	}
+	else{ 
+	
+	}
+
+
 	$(".js-show-nav").on("click",function(){
 		$("html").toggleClass("has-open-nav");
 		return false;
