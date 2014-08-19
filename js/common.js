@@ -3,6 +3,14 @@ head.ready(function() {
 	// $(document).on("click", function(){
 	// 	$(".js-popup").hide();
 	// });
+// WORKAROUND: converting 90vh to px
+	$element = $('.js-top-section');
+	function fixMobileSafariViewport() {
+	  $element.css('height', window.innerHeight);
+	}
+	// listen to portrait/landscape changes
+	window.addEventListener('orientationchange', fixMobileSafariViewport, true);
+	fixMobileSafariViewport();
 	$(".js-show-nav").on("click",function(){
 		$("html").toggleClass("has-open-nav");
 		return false;
