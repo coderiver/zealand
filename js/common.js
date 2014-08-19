@@ -4,6 +4,7 @@ head.ready(function() {
 	// 	$(".js-popup").hide();
 	// });
 // WORKAROUND: converting 90vh to px
+	var IS_MOBILE_SAFARI_7 = !!navigator.userAgent.match(/i(Pad|Phone|Pod).+(Version\/7\.\d+ Mobile)/i);
 	$element = $('.js-top-section');
 	function fixMobileSafariViewport() {
 	  $element.css('height', window.innerHeight);
@@ -11,6 +12,9 @@ head.ready(function() {
 	// listen to portrait/landscape changes
 	window.addEventListener('orientationchange', fixMobileSafariViewport, true);
 	fixMobileSafariViewport();
+	if (IS_MOBILE_SAFARI_7.length > 0) {
+		fixMobileSafariViewport();
+	}
 	$(".js-show-nav").on("click",function(){
 		$("html").toggleClass("has-open-nav");
 		return false;
