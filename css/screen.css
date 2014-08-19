@@ -226,7 +226,13 @@ a { text-decoration: none; }
 .plan__badges a { display: none; }
 @media only screen and (max-width: 900px) { .plan__badges a { position: absolute; display: block; left: 0; right: 0; bottom: 0; top: 0; } }
 .plan__img { overflow: hidden; position: relative; }
-.plan__img img { display: block; max-width: 100%; }
+.plan__img svg { max-width: 100%; }
+
+.svg-big { display: block; }
+@media only screen and (max-width: 900px) { .svg-big { display: none; } }
+
+.svg-small { display: none; }
+@media only screen and (max-width: 900px) { .svg-small { display: block; width: 100%; } }
 
 .window { position: absolute; width: 236px; padding: 28px 18px; background: black; background: rgba(0, 0, 0, 0.7); color: white; text-align: center; font-size: 16px; }
 .window__title { margin-bottom: 18px; font-size: 18px; font-family: "geometria-extablack", Arial, sans-serif; }

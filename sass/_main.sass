@@ -248,9 +248,17 @@
 	&__img
 		overflow: hidden
 		position: relative
-		img
-			display: block
+		svg
 			max-width: 100%
+.svg-big
+	display: block
+	+r(900)
+		display: none
+.svg-small
+	display: none
+	+r(900)
+		display: block
+		width: 100%
 .window
 	position: absolute
 	width: 236px
