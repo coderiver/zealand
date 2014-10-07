@@ -120,11 +120,16 @@ body
 @for $i from 0 through 150
 	$k: ($i)/150
 	.animation-step#{$i}
-		.header__logo
+		.animated.header__logo
 			opacity: $k
 			+scale($k)
 		.logo
 			opacity: 1-($k)
+.ready.header__logo
+	opacity: 1
+	-ms-transform: scale(1)
+	-webkit-transform: scale(1)
+	transform: scale(1)
 a
 	text-decoration: none
 .l-center
@@ -332,3 +337,11 @@ a
 		top: -5px
 		+gmed
 		color: $blue_d
+.lnum
+	font-variant-numeric: lining-nums
+	-moz-font-feature-settings: "lnum" 1
+	-moz-font-feature-settings: "lnum=1"
+	-ms-font-feature-settings: "lnum" 1
+	-o-font-feature-settings: "lnum" 1
+	-webkit-font-feature-settings: "lnum" 1
+	font-feature-settings: "lnum" 1
