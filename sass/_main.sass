@@ -232,6 +232,7 @@
 		padding-right: 10px
 		font-size: 16px
 		+gbold
+		@extend .lnumb
 		&:first-child
 			+creg
 	em
@@ -239,6 +240,7 @@
 		font-size: 16px
 		+gbold
 		display: inline-block
+		@extend .lnumb
 .plan
 	margin: 0 0 64px
 	text-align: center
@@ -305,23 +307,26 @@
 		div
 			display: inline-block
 			vertical-align: middle
-			font-family: Arial, sans-serif
-			-moz-font-feature-settings: "onum" 1 
-			-moz-font-feature-settings: "onum=1" 
-			-ms-font-feature-settings: "onum" 1
-			-o-font-feature-settings: "onum" 1
-			-webkit-font-feature-settings: "onum" 1
-			font-feature-settings: "onum" 1
+			// font-family: Arial, sans-serif
+			// -moz-font-feature-settings: "onum" 1 
+			// -moz-font-feature-settings: "onum=1" 
+			// -ms-font-feature-settings: "onum" 1
+			// -o-font-feature-settings: "onum" 1
+			// -webkit-font-feature-settings: "onum" 1
+			// font-feature-settings: "onum" 1
+			// +gbold
+			@extend .lnumb
 		.geometria
 			display: inline-block
 			vertical-align: middle
-			font-family: "geometria-bold", Arial, sans-serif
+			// font-family: "geometria-bold", Arial, sans-serif
 			-moz-font-feature-settings: "onum" 1 
 			-moz-font-feature-settings: "onum=1" 
 			-ms-font-feature-settings: "onum" 1
 			-o-font-feature-settings: "onum" 1
 			-webkit-font-feature-settings: "onum" 1
 			font-feature-settings: "onum" 1
+			+gbold
 		a
 			display: none
 			+r(900)

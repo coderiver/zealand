@@ -37,15 +37,20 @@
 // ## fonts 
 // Save fonts to /css/fonts, after that write (eot, woff, ttf):
 
-+font(geometria, geometria)  
++font(geometria, geometria-webfont) 
 =greg
 	font-family: "geometria", Arial, sans-serif 
+	-moz-font-feature-settings: "onum", "liga" 0
+	-ms-font-feature-settings: "onum", "liga" 0
+	-o-font-feature-settings: "onum", "liga" 0
+	-webkit-font-feature-settings: "onum", "liga" 0
+	font-feature-settings: "onum", "liga" 0
 	
-+font(geometria-bold, geometria-bold)  
++font(geometria-bold, geometria-bold-webfont)  
 =gbold
 	font-family: "geometria-bold", Arial, sans-serif 
 	
-+font(geometria-medium, geometria-medium)  
++font(geometria-medium, geometria-medium-webfont)  
 =gmed
 	font-family: "geometria-medium", Arial, sans-serif 
 	
@@ -329,6 +334,7 @@ a
 			margin-bottom: 14px
 	p
 		letter-spacing: .2px 
+		@extend .lnum
 		+r(768)
 			margin-bottom: 15px
 	a
@@ -338,10 +344,23 @@ a
 		+gmed
 		color: $blue_d
 .lnum
-	font-variant-numeric: lining-nums
-	-moz-font-feature-settings: "lnum" 1
-	-moz-font-feature-settings: "lnum=1"
-	-ms-font-feature-settings: "lnum" 1
-	-o-font-feature-settings: "lnum" 1
-	-webkit-font-feature-settings: "lnum" 1
-	font-feature-settings: "lnum" 1
+	-moz-font-feature-settings: "onum", "liga" 0
+	-ms-font-feature-settings: "onum", "liga" 0
+	-o-font-feature-settings: "onum", "liga" 0
+	-webkit-font-feature-settings: "onum", "liga" 0
+	font-feature-settings: "onum", "liga" 0
+	+greg
+.lnumb
+	-moz-font-feature-settings: "onum", "liga" 0
+	-ms-font-feature-settings: "onum", "liga" 0
+	-o-font-feature-settings: "onum", "liga" 0
+	-webkit-font-feature-settings: "onum", "liga" 0
+	font-feature-settings: "onum", "liga" 0
+	+gbold
+.lnumm
+	-moz-font-feature-settings: "onum", "liga" 0
+	-ms-font-feature-settings: "onum", "liga" 0
+	-o-font-feature-settings: "onum", "liga" 0
+	-webkit-font-feature-settings: "onum", "liga" 0
+	font-feature-settings: "onum", "liga" 0
+	+gmed

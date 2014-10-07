@@ -224,6 +224,9 @@
 		strong
 			font-weight: normal
 			+gbold
+			@extend .lnumb
+			position: relative
+			top: 2px 
 			+r(760)
 				float: left
 			em
@@ -238,6 +241,7 @@
 			display: block
 			font-size: 27px
 			+gbold
+			@extend .lnumb
 		// +r(760)
 		// 	display: none
 	.slick-dots
@@ -464,6 +468,7 @@
 		+gbold
 		color: $brown 
 		font-size: 32px
+		@extend .lnumb
 		+r(760)
 			margin-bottom: 0
 			font-size: 24px
@@ -547,6 +552,7 @@
 	.opt__col2
 		float: right
 		width: 150px
+		@extend .lnumb
 		+r(760)
 			width: 80px
 	&__title
@@ -576,7 +582,7 @@
 				float: right
 				width: 50%
 		.opt__col2
-			+r(960)
+			+r(900)
 				text-align: right
 	.checkbox
 		+r(760)
@@ -622,6 +628,7 @@
 		color: $brown 
 		text-align: center
 		+gbold 
+		@extend .lnumb
 		+r(960)
 			margin: 26px 0 0 
 			padding: 22px 0 0 
