@@ -1,0 +1,208 @@
+.link
+    display: inline-block
+    border: 2px solid $blue_d
+    padding: 13px 30px 9px 
+    line-height: 1
+    +gextra
+    font-size: 14px
+    text-transform: uppercase
+    color: $blue_d
+    text-align: center 
+    letter-spacing: 1px 
+    background: none
+    border-radius: 2px 
+    +tr
+    +r(768)
+        font-size: 15px
+        letter-spacing: .5px 
+    &:hover
+        color: #fff 
+        background: rgba(#174053, .8) 
+        border: 2px solid rgba(#174053,0)
+    &:active
+        color: #fff 
+        background: rgba(#174053, 1) 
+        border: 2px solid rgba(#174053,0)
+.link-action
+    display: inline-block
+    border: 2px solid #fff
+    padding: 11px 30px 10px
+    line-height: 1
+    +gextra
+    font-size: 15px
+    text-transform: uppercase
+    color: #fff
+    text-align: center 
+    font-weight: normal
+    letter-spacing: 2.5px  
+    background: none
+    border-radius: 2px 
+    +tr
+    &:hover
+        color: #000 
+        background: rgba(#fff, .8) 
+        border: 2px solid rgba(#fff,0)
+    &:active
+        color: #000 
+        background: rgba(#fff, 1) 
+        border: 2px solid rgba(#fff,0)
+.is-liquid
+    display: block
+    padding: 11px 0 8px
+    text-align: center 
+    
+.tab
+    max-width: 700px
+    +clr
+    margin: 115px auto 29px 
+    +r(768)
+        display: none
+    li
+        float: left
+        margin-right: -2px
+        width: 25%
+        &:first-child
+            .link
+                border-radius: 2px 0 0 2px 
+        &:last-child
+            .link
+                border-radius: 0 2px 2px 0 
+    .link
+        display: block
+        padding: 13px 10px 9px 
+        font-size: 14px
+        &.is-active
+            color: #fff 
+            background: rgba(#174053, 1) 
+            border: 2px solid rgba(#174053,0)
+.tab_mobile
+    display: none
+    li
+        margin-right: 0
+        &:first-child
+            .link
+                border-left-width: 2px
+                
+    .link
+        border-left-width: 0
+        border-radius: 0
+        +r(768)
+            font-size: 12px
+    +r(768)
+        margin: 84px 0 30px 
+        padding: 0 20px 
+        display: block
+        width: 100%
+
+.checkbox
+    position: relative
+    display: block
+    margin-bottom: 16px
+    cursor: pointer
+    +clr 
+    input
+        position: absolute
+        left: 0
+        top: 0
+        width: 25px
+        height: 25px
+        z-index: 2
+        opacity: 0
+        &:checked
+            + span
+                color: $brown 
+                &:before
+                    background: #30af36
+                    border-color: #18591c 
+                &:after
+                    top: 4px
+                    opacity: 1
+                    visibility: visible
+    &__title
+        position: relative
+        display: block
+        padding-left: 37px
+        font-size: 19px
+        +greg
+        color: $brown_l 
+        +r(760)
+            font-size: 16px
+        &:before
+            content: ""
+            position: absolute
+            top: -2px
+            left: 0
+            width: 25px
+            height: 25px
+            border: 2px solid #9e897b
+            border-radius: 2px
+            background: #ded5cf 
+            +tr
+        &:after
+            content: ""
+            opacity: 0
+            visibility: hidden
+            position: absolute
+            left: 4px
+            top: 0
+            +tr
+            +svg(check,18,13) 
+    &__price
+        position: absolute
+        top: 0
+        right: 0
+        width: 150px
+        font-size: 18px
+        +gbold
+        +r(900)
+            display: none
+        &.is-mobile
+            display: none
+            font-size: 16px
+            width: 80px
+            +r(900)
+                display: block
+            span
+                font-size: 12px
+            .rub
+                font-size: 12px
+        +r(760)
+            width: 100px
+        .rub
+            font-size: 20px
+.submit
+    display: inline-block
+    padding: 14px 10px 12px
+    font-size: 16px
+    line-height: 1
+    border-radius: 3px
+    +gextra
+    color: #fff
+    background: #30af36   
+    +tr
+    &:hover
+        opacity: .8
+    &:active
+        background: #07780E 
+.input
+    position: relative
+    margin: 0 0 12px 
+    input
+        display: block
+        padding: 0 15px
+        height: 42px 
+        width: 100%
+        background: #f8f5f3 
+        border-radius: 3px
+        +tr
+        font-size: 16px
+        +greg 
+        +placeholder
+            font-size: 16px
+            color: #aa9283
+            +greg 
+        &:focus
+            background: #fff 
+    .submit
+        width: 100%
+        margin-top: 16px

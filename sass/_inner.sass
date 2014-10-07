@@ -1,0 +1,786 @@
+.page-head
+	margin: 0 0 25px 
+.article
+	overflow: hidden
+	padding: 0 14% 
+	+creg
+	line-height: 1.35
+	font-size: 18px
+	color: $brown_l
+	+r(960)
+		padding: 0 20px 
+	+r(768)
+		font-size: 16px
+	h1,h2,h3,h4,h5,h6
+		font-weight: normal
+		color: $brown 
+		+gbold
+	h2
+		margin: 44px 0 29px  
+		text-align: center
+		font-size: 32px
+		+r(768)
+			margin: 30px 0 10px 
+			font-size: 28px
+	h3
+		margin: 42px 0 17px 
+		font-size: 24px
+		+r(768)
+			margin: 30px 0 10px 
+			font-size: 20px
+	p
+		margin-bottom: 18px
+	strong,b
+		font-weight: normal
+		+cbold
+		color: $brown
+	em,i
+		font-weight: normal
+		+cit
+	img
+		margin: 9px 25px 36px 0
+		max-width: 100%
+		height: auto
+		&[align="left"]
+			margin-bottom: 10px
+		+r(480)
+			float: none
+			margin: 12px 0 
+	a
+		color: $blue_d
+		text-decoration: underline
+		&:hover
+			text-decoration: none
+		img
+			float: none
+			margin: 0
+	&__banner
+		position: relative
+		display: block
+		margin: 100px -20% 74px 
+		+r(768)
+			margin: 30px -20% 30px
+		img
+			width: 100%
+			height: auto
+	ol
+		margin: 24px 0 18px
+		counter-reset: list1
+		li
+			position: relative
+			margin-bottom: 7px
+			padding-left: 15px
+			&:before
+				content: ""
+				position: absolute
+				left: 0
+				top: 0
+				//color: $orange  
+				counter-increment: list1 
+				content: counter(list1) ". "
+		+ ul
+			margin-top: 18px
+	ul
+		margin: 24px 0 18px
+		li
+			position: relative
+			margin-bottom: 7px
+			padding-left: 10px
+			+cit
+			&:before 
+				content: "•"
+				position: absolute
+				left: 0
+				top: 0
+	table
+		margin: 24px 0 34px
+		+r(768)
+			font-size: 14px
+		th
+			padding: 3px 10px
+			text-align: left
+			font-weight: normal
+			+gmed
+			color: $brown 
+			+r(768)
+				padding: 3px 5px
+			&:first-child
+				padding-left: 0
+		td
+			padding: 3px 10px
+			+r(768)
+				padding: 3px 5px
+			&:first-child
+				padding-left: 0
+	.slick-slider
+		margin: 35px 0 37px
+		text-align: center
+		img
+			margin: 0
+			display: inline-block
+			width: auto
+			float: none
+	.slick-next,
+	.slick-prev
+		margin-top: -32px
+		&:before
+			color: #51707E 
+	.slick-dots
+		li
+			padding: 0 3px 
+.video
+	position: relative
+	margin: 35px 0 37px
+	overflow: hidden
+	img
+		display: block
+		max-width: 100%
+		margin: 0 auto
+		float: none
+	&__play
+		position: absolute
+		top: 50%
+		left: 50%
+		margin: -42px 0 0 -42px 
+		+svg(play,84,84)
+		+tr
+		&:hover
+			opacity: .9
+
+.article-item
+	border-bottom: 2px solid #c9bab0  
+	padding: 18px 25px 19px
+	line-height: 1.15
+	&:first-child
+		padding-top: 13px
+	&.is-active
+		background: #f8f5f3 
+		a
+			color: $brown_l 
+	a
+		color: $blue_d 
+		&:hover
+			text-decoration: underline
+	&__title
+		display: block
+		margin-bottom: 8px
+		+gbold
+		font-size: 20px
+	&__text	
+		font-size: 16px
+.slider
+	position: absolute
+	bottom: 0
+	//height: 252px	
+	left: 0
+	right: 0
+	padding-bottom: 85px
+	color: #fff 
+	background: rgba(#000,.6) 
+	+r(760)
+		padding: 0 20px 85px
+	&__title
+		padding: 22px 0 16px
+		font-size: 37px
+		letter-spacing: 3px 
+		text-align: center
+		+gbold
+		+r(760)
+			margin: 0 auto 
+			padding: 20px 0 13px 
+			max-width: 80%
+			font-size: 18px
+	&__param
+		float: left
+		width: 50%
+		text-align: left
+		font-size: 16px
+		+r(760)
+			width: 100%
+		div,strong
+			display: inline-block
+			vertical-align: middle
+			overflow: hidden
+		div
+			width: 245px
+			margin-right: 33px
+			+r(760)
+				width: 193px
+				float: left
+				margin-right: 10px
+		span
+			display: inline-block
+			position: relative
+			&:before
+				content: ""
+				position: absolute
+				right: -206px
+				top: 15px
+				width: 200px
+				height: 2px
+				background: url(../img/dots.png) 0 0 repeat
+				+r(760)
+					display: none
+		strong
+			font-weight: normal
+			+gbold
+			+r(760)
+				float: left
+			em
+				font-style: normal
+				font-size: 14px
+	&__info
+		overflow: hidden
+		text-align: center
+		+r(760)
+			display: none
+		span
+			display: block
+			font-size: 27px
+			+gbold
+		// +r(760)
+		// 	display: none
+	.slick-dots
+		bottom: -47px
+	.slick-prev,
+	.slick-next
+		+r(760)
+			top: 15px
+			margin-top: 0
+			&:before
+				font-size: 32px
+	.slick-prev
+		left: -177px
+		background: none 
+		+r(760)
+			left: 0
+	.slick-next
+		right: -177px
+		+r(760)
+			right: 0
+
+.slider-plan
+	max-width: 870px
+	margin: 0 auto 145px
+	&.slick-slider
+		+r(760)
+			display: none
+	.slick-dots
+		bottom: -24px
+		button
+			background: $brown
+			box-shadow: none 
+	.slick-prev,
+	.slick-next
+		margin-top: -62px
+		&:before
+			color: $blue_d 
+	.slick-prev
+		left: -83px
+	.slick-next
+		right: -83px
+.slider-plan_mob
+	margin-bottom: 136px
+	&.slick-slider
+		display: none		
+		+r(760)
+			display: block
+	.slick-list
+		img
+			margin: 0 auto 
+	.slick-dots
+		bottom: -35px
+.sections
+	padding: 45px 0 63px 
+	background: $orange
+	color: #fff  
+	+r(760)
+		padding: 90px 0 32px
+		margin-bottom: 90px
+	+ .l-center
+		.title
+			+r(760)
+				span
+					display: none
+	.title
+		color: #fff 
+		margin: 0 0 28px
+		+r(760)
+			margin-bottom: 12px
+	.l-center
+		padding: 0 25px
+		+r(900)
+			padding: 0 20px  
+	&__wrap
+		float: right
+		margin-left: 44px
+		padding-top: 21px
+		width: 317px
+		+clr  
+		+r(900)
+			float: none
+			margin: 0
+			width: 100%
+			+justify
+		+r(760)
+			padding-top: 10px
+	&__table	
+		overflow: hidden
+		+r(900)
+			display: none
+.table
+	display: table
+	width: 100%
+	margin: 0 0 16px 
+	border: 2px solid #fff
+	font-size: 19px
+	+gmed  
+	color: #fff 
+	&_head
+		margin-bottom: 11px
+		border: 0
+		+creg
+		font-size: 16px
+		.table__cell
+			vertical-align: top 
+			padding-top: 10px
+			&:first-child
+				padding-left: 0
+	&.is-inactive
+		opacity: .3
+		pointer-events: none
+	&.is-active
+		background: #fff
+		color: $orange 
+	.rub
+		font-size: 20px 
+	&__row
+		display: table-row
+	&__cell
+		display: table-cell
+		width: 20%
+		vertical-align: middle
+		padding: 8px 0 7px
+		&:first-child
+			padding-left: 12px
+.section
+	position: relative
+	float: left
+	margin: 0 10px 7px 0 
+	padding: 26px 0 0 30px
+	width: 147px
+	height: 145px
+	color: #fff 
+	&:nth-child(2n)
+		padding: 26px 0 0 19px
+	+r(900)
+		display: inline-block
+		vertical-align: top
+		float: none
+		margin: 0 10px 10px 0
+		font-size: 16px
+	+r(760)
+		padding: 20px 0 0 15px
+	+r(480)
+		height: 130px
+		width: 130px
+
+	&:nth-child(2n)
+		margin-right: 0
+	&:nth-child(3),
+	&:nth-child(4)
+		padding-top: 17px
+	&.is-active
+		color: $orange 
+		.section__img-active	
+			display: block
+		.section__img-inactive
+			display: none
+	&.is-inactive
+		opacity: .3
+	&__img
+		position: absolute
+		z-index: 0
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		img
+			max-width: 100%
+	&__img-active
+		display: none
+	strong
+		font-weight: normal
+		position: relative
+		z-index: 2
+		+gextra
+		font-size: 28px
+		+r(480)
+			font-size: 18px
+	span
+		position: relative
+		z-index: 2
+		display: block
+		+gbold
+		font-size: 18px
+		+r(480)
+			font-size: 14px
+.title_opt
+	margin: 46px 0 43px
+	+r(760)
+		margin-bottom: 14px
+.credit
+	color: $brown_l 
+	text-align: center
+	+r(960)
+		padding: 0 20px 
+	.title
+		margin: 76px 0 20px
+		+r(768)
+			margin: 27px 0 13px
+			font-size: 18px
+			+gbold
+	&__info
+		margin-bottom: 22px
+		font-size: 20px
+		+r(760)
+			margin-bottom: 17px
+			font-size: 16px
+	&__item
+		display: inline-block
+		margin-bottom: 38px
+		width: 27%
+		font-size: 22px
+		+cit
+		+r(760)
+			margin-bottom: 17px
+			font-size: 16px
+		+r(480)
+			float: none
+			padding: 0 20px 
+			width: 100%
+	&__price
+		margin-bottom: 4px
+		+gbold
+		color: $brown 
+		font-size: 32px
+		+r(760)
+			margin-bottom: 0
+			font-size: 24px
+	.to-center
+		+r(960)
+			margin-top: 12px
+.docs
+	text-align: center
+	+clr
+	.title
+		margin: 100px 0 30px
+		+r(768)
+			margin: 45px 0 21px
+			font-size: 18px
+			+gbold
+	.icon-download
+		display: none
+		+r(768)
+			display: block
+			margin: 0 auto 13px
+	&__col
+		display: inline-block
+		vertical-align: top
+		width: 39.2%
+		text-align: left
+		+r(760)
+			display: block
+			float: none
+			padding: 0 20px 
+			width: 100%
+	i
+		vertical-align: middle
+.icon
+	&-pdf
+		+svg(pdf,25,30)
+	&-doc
+		+svg(doc,25,30)
+	&-zip
+		+svg(zip,25,30)
+	&-png
+		+svg(png,25,30)
+	&-xml
+		+svg(xml,25,30)
+	&-download
+		+svg(download,43,45)
+
+.doc
+	display: inline-block
+	position: relative
+	margin-bottom: 21px
+	padding-left: 40px
+	font-size: 16px
+	+gmed
+	color: $blue_d
+	i
+		position: absolute
+		left: 0
+		top: -4px
+		
+.opt
+	max-width: 870px
+	margin: 0 auto 
+	+clr
+	color: $brown_l 
+	+ .title
+		margin: 78px 0 19px
+		+r(760)
+			margin: 122px 0 0
+
+	+r(960)
+		padding: 0 20px 
+		width: 100%
+		+box
+	.opt__col1
+		overflow: hidden
+		padding-right: 10px
+		.opt__title
+			width: 85%
+			+r(760)
+				width: 95%
+	.opt__col2
+		float: right
+		width: 150px
+		+r(760)
+			width: 80px
+	&__title
+		margin-bottom: 21px
+		border-bottom: 1px solid 
+		padding-bottom: 5px
+		font-size: 16px
+		+creg
+	&__total
+		margin-top: 23px
+		border-top: 1px solid $brown_l 
+		padding: 22px 0 0 
+		+clr
+		font-size: 19px
+		+gmed
+		color: $brown
+		+r(960)
+			margin-top: 27px
+			font-size: 16px
+		.rub
+			font-size: 20px
+			+r(960)
+				font-size: 16px
+		.opt__col1,
+		.opt__col2
+			+r(900)
+				float: right
+				width: 50%
+		.opt__col2
+			+r(960)
+				text-align: right
+	.checkbox
+		+r(760)
+			margin-bottom: 20px
+		&__title
+			padding-right: 180px
+			+r(760)
+				padding-right: 110px
+		
+.result
+	+clr
+	margin: 0 auto
+	padding: 5px 0 0 
+	max-width: 1050px
+	&__col
+		float: left
+		width: 31%
+		margin-left: 3%
+		&:first-child
+			margin-left: 0
+		+r(960)
+			float: none
+			width: 80%
+			margin: 0 auto 34px
+			&:first-child
+				margin-left: auto
+		+r(760)
+			width: 100%
+			padding: 0 20px 
+	&__col-slider
+		width: 31.5%
+		+r(960)
+			float: none
+			width: 100%
+			margin: 0 auto 60px
+		+r(768)
+			margin-bottom: 47px
+	&__price
+		margin: 28px 0 82px
+		border-top: 1px solid $brown_l
+		padding: 33px 0 0 
+		font-size: 33px
+		color: $brown 
+		text-align: center
+		+gbold 
+		+r(960)
+			margin: 26px 0 0 
+			padding: 22px 0 0 
+			font-size: 24px
+			margin-bottom: 20px
+	&__title
+		display: none
+		margin-bottom: 12px
+		text-align: center
+		font-size: 18px
+		+gbold
+		color: #734C33
+		+r(960)
+			display: block
+	.soc
+		+r(960)
+			display: none
+	.slick-slider
+		background: #f4efec 
+		+r(768)
+			background: none
+	.slick-prev,
+	.slick-next
+		display: none
+	.slick-slide
+		padding: 21px 0 
+		img
+			margin: 0 auto  
+	.slick-dots
+		bottom: -28px
+		button
+			background: #9e897b
+			box-shadow: none  	
+	.param-list
+		margin: 7px 0 22px
+		color: #734c33
+		font-size: 18px
+		line-height: 1
+		li
+			+r(768)
+				margin-bottom: 2px
+		span
+			width: 55%
+			color: $brown_l 
+			+r(768)
+				width: 72%
+		sup
+			font-size: 18px
+			+r(768)
+				font-size: 12px
+		em
+			display: inline-block
+			vertical-align: middle
+			font-style: normal
+			+r(960)
+				font-size: 16px
+				+gbold
+
+.benefits-wrap_mod
+	padding-top: 0
+	.title
+		margin: 32px 0 21px
+		font-size: 18px
+		+gbold
+.title_projects
+	margin: 84px 0 39px
+	+r(768)
+		margin: 59px 0 21px 
+.soc
+	+clr
+	&__title
+		margin: 0 0 25px 
+		font-size: 18px
+		+gbold
+		color: $brown
+		text-transform: uppercase
+	a
+		float: left
+		margin-left: 8%
+		&:first-child
+			margin-left: 0
+		&:hover
+			opacity: .9
+	&__fb
+		+sr(soc-fb)
+	&__od
+		+sr(soc-od)
+	&__vk
+		+sr(soc-vk)
+	&__pi
+		+sr(soc-pi)
+	&__in
+		+sr(soc-in)
+.form
+	margin: 0 0 34px 
+	padding: 25px 23px 18px 
+	background: #e7e1dc 
+	border-radius: 3px
+	+r(960)
+		margin-bottom: 47px
+		padding: 20px 23px 18px 
+	.doc-title
+		margin-bottom: 14px
+		+r(960)
+			margin-bottom: 16px
+	+ .doc-title
+		margin-left: 17px
+		+r(960)
+			.icon-doc-link
+				margin-bottom: 17px
+		+r(760)
+			margin: 0
+.doc-title
+	position: relative
+	display: inline-block
+	position: relative
+	color: $brown
+	font-size: 19px
+	+gbold
+	white-space: nowrap
+	+r(960)
+		font-size: 18px
+	+r(760)
+		text-align: center
+	i
+		display: inline-block
+		margin-right: 18px
+		vertical-align: middle
+		+r(760)
+			display: block
+			margin: 0 auto 10px
+	span
+		display: inline-block
+		vertical-align: middle
+		white-space: normal
+.icon-doc-pdf
+	+svg(pdf-proj,32,42)
+	+r(960)
+		+svg(pdf2,40,52)
+.icon-doc-link
+	+svg(link,32,42)
+.copy-link
+	display: block
+	margin: 14px 0 0
+	padding: 13px 16px
+	background: #e7e1dc
+	border-radius: 3px
+	+gmed
+	font-size: 16px
+	color: #734c33
+	line-height: 1  
+	+r(960)
+		text-align: center
+		margin-top: 16px  
+.projects-wrap_mod
+	margin-bottom: 65px
+	.project
+		height: 535px
+	.project__img
+		img
+			margin-top: -125px
+		

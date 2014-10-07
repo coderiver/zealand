@@ -1,0 +1,387 @@
+.top-section
+	position: relative
+	height: 100vh
+	min-height: 568px
+	overflow: hidden
+	text-align: center
+	&_slider
+		min-height: 480px
+		&:before
+			display: none
+	&__bg
+		display: none
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		z-index: 1
+		background-repeat: no-repeat
+		background-position: 0 0
+		+cover
+	.slider
+		z-index: 2 
+	.slick-slider
+		margin: 0 auto 
+		width: 720px
+		+r(760) 
+			width: 100%
+	&:before
+		content: ""
+		position: absolute
+		z-index: 2
+		top: 0
+		right: 0 
+		bottom: 0
+		left: 0
+		background: rgba(#000,.6) 
+	&__img
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 50%
+		z-index: -1
+		margin-left: -1500px
+		width: 3000px
+	&__title
+		position: absolute
+		z-index: 2
+		bottom: 147px
+		left: 0
+		right: 0
+		line-height: 1.2
+		font-size: 36px
+		color: #fff
+		+gmed  
+		+r(768)
+			padding: 0 40px 
+			bottom: 155px
+			font-size: 19px	
+		span
+			display: inline-block
+			max-width: 560px
+.touch
+	.top-section
+		height: 100%
+.scroll-down
+	position: absolute
+	bottom: 39px
+	left: 0
+	right: 0 
+	z-index: 2
+	font-size: 18px
+	+r(768)
+		bottom: 102px
+	a
+		+cit
+		color: #fff 
+	span
+		display: block
+		margin: 0 0 6px 
+		+r(768)
+			display: none
+	i
+		+svg(arr3,27,24) 
+		-webkit-background-size: contain 
+		-o-background-size: contain 
+		background-size: contain 
+.benefits-wrap
+	padding: 109px 11% 0
+	+justify 
+	+r(768)
+		padding: 94px 20px 0
+	.title
+		margin-top: 0
+	+ .to-center
+		margin-bottom: 64px
+		+r(768)
+			margin: 9px 0 32px 
+.benefit
+	display: inline-block
+	margin-bottom: 37px
+	width: 245px
+	vertical-align: top
+	text-align: center
+	font-size: 18px
+	line-height: 1.2
+	+r(768)
+		display: block
+		margin-bottom: 17px
+		width: 100%
+	&__title
+		margin-bottom: 13px
+		+gmed
+		font-size: 20px
+		line-height: 1.2
+		color: $blue_d
+		+r(768)
+			position: relative
+			margin: 0
+			padding-left: 12px
+			text-align: left
+			font-size: 16px
+			&:before
+				content: ""
+				position: absolute
+				left: 0
+				top: 7px
+				width: 5px
+				height: 5px
+				border-radius: 50% 
+				background: $blue_d  
+	&__text
+		color: $brown_l 
+		line-height: 1.25
+		+r(768)
+			display: none
+.projects-wrap
+	margin-bottom: 60px
+	+clr
+	position: relative
+	font-size: 0
+	text-align: center
+	&_mod
+		margin-bottom: 33px
+	.title
+		position: absolute
+		top: 89px
+		right: 0
+		left: 0
+		letter-spacing: 2.4px 
+		margin: 0
+		z-index: 2
+		color: #fff
+		+r(900)
+			span
+				display: none
+.project
+	position: relative
+	display: inline-block
+	vertical-align: top
+	width: 33.3%
+	color: #fff 
+	overflow: hidden
+	+r(900)
+		display: block
+		margin: 0 auto 
+		width: 480px
+		&:first-child
+			width: 480px
+	+r(768)
+		max-width: 366px
+		width: auto
+		height: 460px
+	&__img
+		overflow: hidden
+		img
+			display: block
+			width: 100%
+			+r(1600)
+				width: auto
+		// +r(768)
+		// 	img
+		// 		display: none
+	// &__img-small
+	// 	img
+	// 		display: none
+	// 		+r(768)
+	// 			display: block
+	&__info
+		position: absolute
+		bottom: 0
+		//top: 244px
+		left: 0
+		right: 0
+		padding: 29px 0 56px
+		font-size: 16px
+		background: rgba(#000, .7) 
+		text-align: center
+		+r(1100)
+			padding: 29px 20px 56px
+		+r(768)
+			padding: 22px 20px 31px
+	&__title
+		margin: 0 0 18px 
+		+gbold
+		font-size: 18px
+		text-align: center
+		text-transform: uppercase
+		letter-spacing: 2px 
+		+r(768)
+			margin-bottom: 7px
+	.param-list
+		margin-bottom: 21px
+		text-align: center
+		span
+			text-align: left
+			width: 150px
+			+r(1100)
+				width: 50%
+		+r(768)
+			margin-bottom: 17px
+			line-height: 1.4
+			li
+				margin-bottom: 2px	
+.param-list
+	line-height: 1.6
+	text-align: left
+	font-size: 0
+	span
+		display: inline-block
+		width: 50%
+		padding-right: 10px
+		font-size: 16px
+		+gbold
+		&:first-child
+			+creg
+	em
+		font-style: normal
+		font-size: 16px
+		+gbold
+		display: inline-block
+.plan
+	margin: 0 0 64px
+	text-align: center
+	+r(900)
+		padding: 7px 0
+		margin-bottom: 25px
+	&__badges
+		padding: 0 3% 
+		margin-bottom: 23px
+		font-size: 16px
+		line-height: 1
+		+r(768)
+			padding: 0 20px 
+			margin-bottom: 20px
+		li
+			display: inline-block
+			position: relative
+			width: 33%
+			text-align: left
+			color: $brown_l
+			white-space: nowrap
+			&.is-blue
+				+r(900)
+					background: $blue
+				.plan__marker
+					background: $blue 
+			&.is-green
+				+r(900)
+					background: $green 
+				.plan__marker
+					background: $green 
+			&.is-orange
+				+r(900)
+					background: $orange
+				.plan__marker
+					background: $orange 
+			+r(1100)
+				width: 28.3%
+			+r(900)
+				width: 100%
+				margin-bottom: 1px
+				padding: 11px 25px 11px 13px
+				color: #000 
+				.plan__marker
+					display: none
+				&:after
+					content: "›"
+					position: absolute
+					top: 50%
+					height: 20px
+					margin-top: -10px
+					right: 12px
+					font-size: 20px
+					+gbold
+					color: #000 
+		span
+			font-weight: bold
+		.plan__marker
+			display: inline-block 
+			margin: 0 8px 0 0
+			vertical-align: middle
+			width: 25px
+			height: 25px
+		div
+			display: inline-block
+			vertical-align: middle
+			font-family: Arial, sans-serif
+			-moz-font-feature-settings: "onum" 1 
+			-moz-font-feature-settings: "onum=1" 
+			-ms-font-feature-settings: "onum" 1
+			-o-font-feature-settings: "onum" 1
+			-webkit-font-feature-settings: "onum" 1
+			font-feature-settings: "onum" 1
+		.geometria
+			display: inline-block
+			vertical-align: middle
+			font-family: "geometria-bold", Arial, sans-serif
+			-moz-font-feature-settings: "onum" 1 
+			-moz-font-feature-settings: "onum=1" 
+			-ms-font-feature-settings: "onum" 1
+			-o-font-feature-settings: "onum" 1
+			-webkit-font-feature-settings: "onum" 1
+			font-feature-settings: "onum" 1
+		a
+			display: none
+			+r(900)
+				position: absolute
+				display: block
+				left: 0
+				right: 0
+				bottom: 0
+				top: 0
+		.rub
+			+r(768)
+				font-size: 12px
+	&__img
+		overflow: hidden
+		position: relative
+		.svg-big
+			max-width: 100%
+.svg-big
+	display: block
+	position: relative
+	+r(900)
+		display: none
+	&_mod
+		.window__title
+			margin-bottom: 18px
+		.link-action
+			line-height: 1.2
+.svg-small
+	display: none
+	position: relative
+	+r(900)
+		display: block
+	.window
+		left: 50%
+		margin-left: -118px
+.window
+	position: absolute
+	width: 236px
+	padding: 36px 18px 27px
+	background: #000 
+	background: rgba(#000,.7) 
+	color: #fff 
+	text-align: center
+	font-size: 16px
+	&__title
+		margin-bottom: 14px
+		font-size: 18px
+		letter-spacing: 2px 
+		+gextra
+	&__close
+		position: absolute
+		top: 11px
+		right: 11px
+		+svg(close,14,14)
+		&:active
+			top: 12px
+	.param-list
+		margin-bottom: 15px
+		text-align: left
+		span
+			width: 55%
+	.link-action
+		margin-top: 24px
